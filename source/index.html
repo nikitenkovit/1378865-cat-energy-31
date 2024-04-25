@@ -5,6 +5,12 @@
     <title>Cat energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+
     <script src="scripts/index.js" defer></script>
   </head>
 
@@ -12,7 +18,13 @@
     <header class="main-header">
       <div class="main-header__wrapper wrapper">
         <a class="main-header__link" href="index.html">
-          <img class="main-header__logo" src="#" width="33" height="38" alt="Кот - супер герой и текст Cat Energy">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg">
+            <img class="main-header__logo" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+          </picture>
+          <!-- TODO текст скрывать при ширине от 768px -->
+          <img class="main-header__logo-text-mobile" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="текст Cat Energy">
         </a>
 
         <nav class="main-navigation">
@@ -34,13 +46,16 @@
     </header>
 
     <main class="main-conteiner">
-      <section class="banner">
-        <div class="banner__wrapper wrapper">
-          <h1 class="banner__title">Функциональное питание для котов</h1>
-          <p class="banner__description">Занялся собой? Займись котом!</p>
-          <img class="banner__image" src="#" srcset="/images/index-can-mobile@2x.png 2x"
-            width="280" height="270" alt="Упаковка корма Cat energy со вкусом курицы.">
-          <a class="banner__button button button--primary" href="#">подобрать программу</a>
+      <section class="hero">
+        <div class="hero__wrapper wrapper">
+          <h1 class="hero__title">Функциональное питание для котов</h1>
+          <p class="hero__description">Занялся собой? Займись котом!</p>
+          <a class="hero__button button button--primary" href="#">подобрать программу</a>
+          <picture>
+            <source type="image/png" media="(min-width: 1440px)" srcset="images/hero/hero-desctop@1x.png 1x, images/hero/hero-desctop@2x.png 2x">
+            <source type="image/png" media="(min-width: 768px)" srcset="images/hero/hero-tablet@1x.png 1x, images/hero/hero-tablet@2x.png 2x">
+            <img class="hero__image" src="images/hero/hero-mobile@1x.png" srcset="images/hero/hero-mobile@2x.png 2x" width="280" height="270" alt="Упаковка корма Cat energy со вкусом курицы">
+          </picture>
         </div>
       </section>
 
@@ -56,8 +71,6 @@
               </p>
               <a class="programs__link button button--link" href="#">
                 <span class="programs__link-text">каталог slim</span>
-                <!-- TODO заменить img стрелки на svg -->
-                <img class="programs__logo-image" src="#" width="33" height="38" alt="Стрелка вправо">
               </a>
             </li>
             <li class="programs__item programs__item--pro">
@@ -67,8 +80,6 @@
               </p>
               <a class="programs__link button button--link" href="#">
                 <span class="programs__link-text">каталог pro</span>
-                <!-- TODO заменить img стрелки на svg -->
-                <img class="programs__logo-image" src="#" width="33" height="38" alt="Стрелка вправо">
               </a>
             </li>
           </ul>
@@ -127,16 +138,22 @@
             <span class="example__costs-text">15 000 РУБ.</span>
           </div>
 
-          <div class="example__image-range image-range">
-            <div class="image-range__before">
-              <img class="image-range__image" src="#" width="280" height="256" alt="Толстый кот">
+          <div class="example__image-range example-slider">
+            <div class="example-slider__before">
+              <picture>
+                <source type="image/png" media="(min-width: 768px)" srcset="images/slider/before-tablet@1x.png 1x, images/slider/before-tablet@2x.png 2x">
+                <img class="example-slider__image" src="images/slider/before-mobile@1x.png" srcset="images/slider/before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот" >
+              </picture>
             </div>
-            <div class="image-range__after">
-              <img class="image-range__image" src="#" width="280" height="256" alt="Худой кот">
+            <div class="example-slider__after">
+              <picture>
+                <source type="image/png" media="(min-width: 768px)" srcset="images/slider/after-tablet@1x.png 1x, images/slider/after-tablet@2x.png 2x">
+                <img class="example-slider__image" src="images/slider/after-mobile@1x.png" srcset="images/slider/after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот" >
+              </picture>
             </div>
 
-            <div class="image-range__line">
-              <button class="image-range__button" type="button" aria-label="Перетащить для сравнения"></button>
+            <div class="example-slider__line">
+              <button class="example-slider__button" type="button" aria-label="Перетащить для сравнения"></button>
             </div>
           </div>
         </div>
@@ -152,14 +169,14 @@
             </p>
           </div>
         </div>
-        <!-- TODO Заменить картинку карты на iframe яндекс карт -->
-        <img class="contact__map" width="320" height="362" src="#" alt="Карта">
+        <!-- TODO сделать карту фоном для блока в css для no script. Добавить маркер бренда на карту -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198525!2d30.32047247784884!3d59.938719162093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1713861891682!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper wrapper">
         <a class="main-footer__logo-link" href="index.html">
-          <img class="main-footer__logo-text" src="#" width="128" height="24" alt="Cat energy">
+          <img class="main-footer__logo-text" src="images/logo/footer-logo.svg" width="128" height="24" alt="Cat energy">
         </a>
 
         <ul class="main-footer__social-list social-list">
@@ -176,8 +193,7 @@
 
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/" aria-label="Сайт HTML Academy">
           <span class="main-footer__copyright-text">HTML Academy</span>
-          <!-- TODO Заменить img на svg -->
-          <img class="main-footer__copyright-logo" src="#" width="27" height="35" alt="Логотип HTML Academy">
+          <img class="main-footer__copyright-logo" src="images/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>
