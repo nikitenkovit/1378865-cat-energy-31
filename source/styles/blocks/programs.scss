@@ -1,0 +1,35 @@
+.programs__item {
+  background-color: $secondary-bg-color;
+}
+
+.programs__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $primary-title-color;
+}
+
+.programs__description {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $primary-text-color;
+}
+
+.programs__link {
+  display: flex;
+  gap: 15px;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 29.64px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $primary-title-color;
+
+  &:active {
+    color: opacity($primary-title-color, 0.3);
+  }
+}
