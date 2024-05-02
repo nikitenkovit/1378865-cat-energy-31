@@ -1,0 +1,46 @@
+$button-primary-bg-color-hover: #5eaa2f;
+$button-secondary-bg-color-hover: #ebebeb;
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  &--primary {
+    color: $secondary-title-color;
+    background-color: $primary-bg-color;
+
+    &:hover {
+      background-color: $button-primary-bg-color-hover;
+    }
+
+    &:focus-visible {
+      background-color: $button-primary-bg-color-hover;
+    }
+
+    &:active {
+      color: opacity($secondary-title-color, 0.3);
+    }
+  }
+
+  &--secondary {
+    color: $primary-text-color;
+    background-color: $secondary-bg-color;
+
+    &:hover {
+      background-color: $button-secondary-bg-color-hover;
+    }
+
+    &:focus-visible {
+      background-color: $button-secondary-bg-color-hover;
+    }
+  }
+}
