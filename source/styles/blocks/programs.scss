@@ -1,35 +1,102 @@
+.programs {
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__title {
+    position: relative;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: min-content auto;
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    text-align: left;
+    align-items: center;
+    color: $primary-title-color;
+
+    &::before {
+      @include pseudo-element(50px, 50px, auto, auto, static);
+      display: block;
+      background-color: $primary-bg-color;
+      border-radius: 50%;
+    }
+
+    &::after {
+      @include pseudo-element(50px, 50px, auto, 0);
+      @include mask-image(url("../../icons/stack.svg#cat-slim"));
+      bottom: 3px;
+      background-color: $primary-title-color;
+    }
+  }
+
+  &__description {
+    position: relative;
+    margin-top: 22px;
+    margin-bottom: 38px;
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 18px;
+    color: $primary-text-color;
+
+    &::after {
+      @include pseudo-element(100%, 1, auto);
+      bottom: -23px;
+      background-color: $fourth-bg-color;
+    }
+  }
+
+  &__link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: max-content;
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 29.64px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary-title-color;
+
+    &::after {
+      @include pseudo-element(24px, 10px, auto, auto, static);
+      @include mask-image(url("../../icons/stack.svg#icon_arrow"));
+      display: block;
+      background-color: $primary-title-color;
+      transition: width 0.5s, transform 0.5s;
+    }
+
+    &:hover {
+      &::after {
+        width: 32px;
+        transform: scaleX(1.35);
+      }
+    }
+
+    &:active {
+      color: rgba($primary-title-color, 0.3);
+
+      &::after {
+        background-color: rgba($primary-title-color, 0.3);
+      }
+    }
+  }
+}
+
 .programs__item {
+  position: relative;
+  padding: 24px 20px 18px;
   background-color: $secondary-bg-color;
-}
 
-.programs__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 37px;
-  text-transform: uppercase;
-  color: $primary-title-color;
-}
-
-.programs__description {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 18px;
-  color: $primary-text-color;
-}
-
-.programs__link {
-  display: flex;
-  gap: 15px;
-  font-family: $secondary-font;
-  font-size: 20px;
-  line-height: 29.64px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $primary-title-color;
-
-  &:active {
-    color: opacity($primary-title-color, 0.3);
+  &--pro .programs__title {
+    &::after {
+      @include pseudo-element(67px, 28px, auto, -8px);
+      @include mask-image(url("../../icons/stack.svg#cat-pro"));
+      bottom: 11px;
+    }
   }
 }

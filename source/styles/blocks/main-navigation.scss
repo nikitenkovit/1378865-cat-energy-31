@@ -1,9 +1,11 @@
-.main-navigation__link {
-  font-family: $secondary-font;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  color: $primary-title-color;
+.main-navigation {
+  &__link {
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: $primary-title-color;
+  }
 }

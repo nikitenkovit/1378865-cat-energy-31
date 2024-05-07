@@ -19,12 +19,12 @@
       <div class="main-header__wrapper wrapper">
         <a class="main-header__link" href="index.html">
           <picture>
-            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg">
+            <source type="image/svg+xml" media="(min-width: 1440px)" width="202" height="59" srcset="images/logo/logo-desktop.svg">
+            <source type="image/svg+xml" media="(min-width: 768px)" width="175" height="50" srcset="images/logo/logo-tablet.svg">
             <img class="main-header__logo" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
           </picture>
-          <!-- TODO текст скрывать при ширине от 768px -->
-          <img class="main-header__logo-text-mobile" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="текст Cat Energy">
+
+          <img class="main-header__logo-text-mobile" src="images/logo/logo-text.svg" width="101" height="18" alt="текст Cat Energy">
         </a>
 
         <nav class="main-navigation">
@@ -50,12 +50,12 @@
         <div class="hero__wrapper wrapper">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__description">Занялся собой? Займись котом!</p>
-          <a class="hero__button button button--primary" href="#">подобрать программу</a>
           <picture>
             <source type="image/png" media="(min-width: 1440px)" srcset="images/hero/hero-desctop@1x.png 1x, images/hero/hero-desctop@2x.png 2x">
             <source type="image/png" media="(min-width: 768px)" srcset="images/hero/hero-tablet@1x.png 1x, images/hero/hero-tablet@2x.png 2x">
             <img class="hero__image" src="images/hero/hero-mobile@1x.png" srcset="images/hero/hero-mobile@2x.png 2x" width="280" height="270" alt="Упаковка корма Cat energy со вкусом курицы">
           </picture>
+          <a class="hero__button button button--primary" href="#">подобрать программу</a>
         </div>
       </section>
 
@@ -160,7 +160,7 @@
       </section>
 
       <section class="contact">
-        <div class="contact__wrapper">
+        <div class="contact__wrapper wrapper">
           <div class="contact__container">
             <h3 class="contact__title">приглашаем к сотрудничеству дилеров!</h3>
 
@@ -170,30 +170,44 @@
           </div>
         </div>
         <!-- TODO сделать карту фоном для блока в css для no script. Добавить маркер бренда на карту -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198525!2d30.32047247784884!3d59.938719162093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1713861891682!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198525!2d30.32047247784884!3d59.938719162093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1713861891682!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper wrapper">
         <a class="main-footer__logo-link" href="index.html">
-          <img class="main-footer__logo-text" src="images/logo/footer-logo.svg" width="128" height="24" alt="Cat energy">
+          <img class="main-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="Cat energy">
         </a>
 
         <ul class="main-footer__social-list social-list">
           <li class="social-list__item social-list__item--vkontakte">
-            <a class="social-list__link" href="#">Вконтакте</a>
+            <a class="social-list__link" href="#" aria-label="Сайт Вконтакте">
+              <svg width="28" height="22">
+                <use href="../icons/stack.svg#icon_vkontakte"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item social-list__item--youtube">
-            <a class="social-list__link" href="#">Ютьюб</a>
+            <a class="social-list__link" href="#" aria-label="Сайт Ютьюб">
+              <svg width="28" height="22">
+                <use href="../icons/stack.svg#icon_youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item social-list__item--telegram">
-            <a class="social-list__link" href="#">Телеграм</a>
+            <a class="social-list__link" href="#" aria-label="Сайт Телеграм">
+              <svg width="28" height="22">
+                <use href="../icons/stack.svg#icon_telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
 
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/" aria-label="Сайт HTML Academy">
           <span class="main-footer__copyright-text">HTML Academy</span>
-          <img class="main-footer__copyright-logo" src="images/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <svg width="27" height="34">
+            <use href="../icons/stack.svg#logo_html_academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

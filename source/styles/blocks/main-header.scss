@@ -1,0 +1,7 @@
+.main-header {
+  &__logo-text-mobile {
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+}

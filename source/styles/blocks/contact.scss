@@ -2,23 +2,23 @@
   &--background {
     background-color: $secondary-bg-color;
   }
-}
 
-.contact__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: $third-title-color;
-}
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $third-title-color;
+  }
 
-.main-footer__copyright-link {
-  text-decoration: none;
-}
+  &__address {
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 20px;
+  }
 
-.contact__address {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 20px;
+  &__map {
+    max-width: 100%;
+  }
 }

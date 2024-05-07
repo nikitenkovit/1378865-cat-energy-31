@@ -1,17 +1,34 @@
 .hero {
+  position: relative;
   font-family: $secondary-font;
   text-align: center;
   color: $secondary-title-color;
-  background-color: $primary-bg-color;
-}
 
-.hero__title {
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 36px;
-}
+  &::before {
+    @include pseudo-element(100%, 302px);
+    @include background-image-set(
+      image-set(
+        url("../../images/hero/hero-bg-cat-mobile@2x.png") type("image/png") 2x,
+        url("../../images/hero/hero-bg-cat-mobile@1x.png") type("image/png") 1x,
+      )
+    );
+    z-index: -2;
+  }
 
-.hero__description {
-  font-size: 14px;
-  line-height: 14px;
+  &::after {
+    @include pseudo-element(100%, 302px);
+    background-color: rgba($primary-bg-color, 0.85);
+    z-index: -1;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 36px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

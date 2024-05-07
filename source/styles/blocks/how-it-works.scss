@@ -1,13 +1,64 @@
-.how-it-works__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  color: $primary-title-color;
+.how-it-works {
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    color: $primary-title-color;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__text {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 18px;
+
+    &::before {
+      @include pseudo-element(60px, 60px, auto, auto, static);
+      background-color: $primary-bg-color;
+    }
+
+    &::after {
+      background-color: $secondary-title-color;
+    }
+  }
 }
 
 .how-it-works__item {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 18px;
+  &--first .how-it-works__text {
+    &::after {
+      @include pseudo-element(24.8px, 28px, 16px, 18px);
+      @include mask-image(url("../../icons/stack.svg#icon_leaf"));
+    }
+  }
+
+  &--second .how-it-works__text {
+    &::after {
+      @include pseudo-element(25.98px, 28.51px, 16px, 17.5px);
+      @include mask-image(url("../../icons/stack.svg#icon_water"));
+    }
+  }
+
+  &--third .how-it-works__text {
+    &::after {
+      @include pseudo-element(25px, 30px, 15px, 17.5px);
+      @include mask-image(url("../../icons/stack.svg#icon_eat"));
+    }
+  }
+
+  &--fourth .how-it-works__text {
+    &::after {
+      @include pseudo-element(26.09px, 31px, 15px, 17.5px);
+      @include mask-image(url("../../icons/stack.svg#icon_clock"));
+    }
+  }
 }

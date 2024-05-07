@@ -17,8 +17,8 @@
             <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg">
             <img class="main-header__logo" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
           </picture>
-          <!-- TODO текст скрывать при ширине от 768px -->
-          <img class="main-header__logo-text" src="images/logo/logo-text-mobile.svg" width="101" height="18" alt="текст Cat Energy">
+
+          <img class="main-header__logo-text" src="images/logo/logo-text.svg" width="101" height="18" alt="текст Cat Energy">
         </a>
 
         <nav class="main-navigation">
@@ -41,7 +41,6 @@
 
     <main class="main-container">
       <section class="products">
-        <div class="products__wrapper wrapper">
           <h1 class="products__title">Каталог продукции</h1>
 
           <ul class="products__list">
@@ -71,9 +70,9 @@
                     <dd class="product__info-text">700 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
 
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product">
@@ -102,9 +101,9 @@
                     <dd class="product__info-text">1000 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
 
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product">
@@ -133,9 +132,9 @@
                     <dd class="product__info-text">700 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
 
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product">
@@ -164,9 +163,8 @@
                     <dd class="product__info-text">1000 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
-
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product">
@@ -195,9 +193,8 @@
                     <dd class="product__info-text">400 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
-
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product">
@@ -226,9 +223,8 @@
                     <dd class="product__info-text">700 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
-
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product">
@@ -257,19 +253,21 @@
                     <dd class="product__info-text">500 ₽</dd>
                   </div>
                 </dl>
+                <button class="product__button button button--primary" type="button">Заказать</button>
               </div>
-
-              <button class="product__button button button--primary" type="button">Заказать</button>
             </li>
 
             <li class="products__item product product--show-more">
-              <h3 class="product__title">Показать еще 100500 товаров</h3>
-              <p class="product__description">На самом деле вкусов гораздо больше!</p>
+              <div class="product__wrapper">
+                <a class="product__title-link" href="#">
+                  <h3 class="product__title">Показать еще 100500 товаров</h3>
+                </a>
+                <p class="product__description">На самом деле вкусов гораздо больше!</p>
 
-              <button class="product__button button button--secondary" type="button">Показать все</button>
+                <button class="product__button button button--secondary" type="button">Показать все</button>
+              </div>
             </li>
           </ul>
-        </div>
       </section>
 
       <section class="additional">
@@ -320,7 +318,7 @@
           </ul>
 
           <div class="additional__gift">
-            <p class="additional__gift-text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="additional__gift-text">Закажите все <br>и получите чехол для <br>кота в подарок!</p>
           </div>
         </div>
       </section>
@@ -339,7 +337,7 @@
       </section>
 
       <section class="contact contact--background">
-        <div class="contact__wrapper">
+        <div class="contact__wrapper wrapper">
           <div class="contact__container">
             <h3 class="contact__title">приглашаем к сотрудничеству дилеров!</h3>
 
@@ -355,24 +353,38 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper wrapper">
         <a class="main-footer__logo-link" href="index.html">
-          <img class="main-footer__logo-text" src="images/logo/footer-logo.svg" width="128" height="24" alt="Cat energy">
+          <img class="main-footer__logo-text" src="images/logo/logo-text.svg" width="128" height="24" alt="Cat energy">
         </a>
 
         <ul class="main-footer__social-list social-list">
           <li class="social-list__item social-list__item--vkontakte">
-            <a class="social-list__link" href="#">Вконтакте</a>
+            <a class="social-list__link" href="#" aria-label="Сайт Вконтакте">
+              <svg width="28" height="22">
+                <use href="../icons/stack.svg#icon_vkontakte"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item social-list__item--youtube">
-            <a class="social-list__link" href="#">Ютьюб</a>
+            <a class="social-list__link" href="#" aria-label="Сайт Ютьюб">
+              <svg width="28" height="22">
+                <use href="../icons/stack.svg#icon_youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item social-list__item--telegram">
-            <a class="social-list__link" href="#">Телеграм</a>
+            <a class="social-list__link" href="#" aria-label="Сайт Телеграм">
+              <svg width="28" height="22">
+                <use href="../icons/stack.svg#icon_telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
 
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/" aria-label="Сайт HTML Academy">
           <span class="main-footer__copyright-text">HTML Academy</span>
-          <img class="main-footer__copyright-logo" src="images/logo/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
+          <svg width="27" height="34">
+            <use href="../icons/stack.svg#logo_html_academy"></use>
+          </svg>
         </a>
       </div>
     </footer>
