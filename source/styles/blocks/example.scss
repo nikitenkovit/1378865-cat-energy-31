@@ -1,38 +1,38 @@
 .example {
   background-color: $third-bg-color;
-}
 
-.example__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  color: $primary-title-color;
-}
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    color: $primary-title-color;
+  }
 
-.example__description {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 18px;
-}
+  &__description {
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-.example__term {
-  font-family: $secondary-font;
-  font-size: 24px;
-  line-height: 34px;
-  color: $primary-title-color;
-}
+  &__term {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 34px;
+    color: $primary-title-color;
+  }
 
-.example__definition {
-  font-family: $primary-font;
-  font-size: 12px;
-  line-height: 12px;
-}
+  &__definition {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 12px;
+  }
 
-.example__costs {
-  font-family: $secondary-font;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  color: $primary-title-color;
+  &__costs {
+    font-family: $secondary-font;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $primary-title-color;
+  }
 }

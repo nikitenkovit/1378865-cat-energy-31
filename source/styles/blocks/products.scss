@@ -1,7 +1,9 @@
-.products__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  color: $primary-title-color;
+.products {
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: $primary-title-color;
+  }
 }

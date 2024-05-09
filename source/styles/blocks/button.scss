@@ -3,7 +3,6 @@ $button-secondary-bg-color-hover: #ebebeb;
 
 .button {
   display: block;
-  width: 100%;
   padding: 10px;
   font-family: $secondary-font;
   font-size: 16px;
@@ -27,7 +26,7 @@ $button-secondary-bg-color-hover: #ebebeb;
     }
 
     &:active {
-      color: opacity($secondary-title-color, 0.3);
+      color: rgba($secondary-title-color, 0.3);
     }
   }
 

@@ -1,31 +1,60 @@
-.additional__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  color: $primary-title-color;
-}
+.additional {
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: $primary-title-color;
+  }
 
-.additional__item-name {
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 16px;
-  color: $fourth-title-color;
-}
+  &__item-name {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 16px;
+    color: $fourth-title-color;
+  }
 
-.additional__info {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 14px;
-}
+  &__info {
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 14px;
+  }
 
-.additional__gift {
-  background-color: $primary-bg-color;
-}
+  &__gift {
+    position: relative;
+    min-height: 290px;
+    padding-top: 187px;
 
-.additional__gift-text {
-  font-family: $primary-font;
-  font-size: 16px;
-  line-height: 20px;
-  color: $secondary-title-color;
+    &::before {
+      @include pseudo-element(100%, 290px);
+      @include background-image-set(
+        image-set(
+          url("../../images/additional/additional-bg-mobile@2x.png") type("image/png") 2x,
+          url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x,
+        )
+      );
+      z-index: -2;
+    }
+
+    &::after {
+      @include pseudo-element(100%, 290px);
+      background-color: rgba($primary-bg-color, 0.85);
+      z-index: -1;
+    }
+  }
+
+  &__gift-text {
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: $secondary-title-color;
+    text-align: center;
+
+    &::before {
+      @include pseudo-element(78px, 80px, 60px, 50%);
+      @include mask-image(url("../../icons/stack.svg#icon_gift"));
+      background-color: $secondary-title-color;
+      transform: translateX(-50%);
+    }
+  }
 }

@@ -1,22 +1,60 @@
-.product__title-link {
-  text-decoration: none;
+.product {
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  &__title-link {
+    text-decoration: none;
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $fourth-title-color;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__info-item {
+    font-family: $primary-font;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__button {
+    width: 100%;
+  }
 }
 
-.product__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: $fourth-title-color;
-}
+.product--show-more {
+  padding: 25px 0;
+  text-align: center;
 
-.product__info-item {
-  font-family: $primary-font;
-  font-size: 12px;
-  line-height: 16px;
-}
+  .product__title-link {
+    display: inline-block;
+    margin-bottom: 8px;
 
-.product--show-more .product__title {
-  color: $third-title-color;
+    &::before {
+      @include pseudo-element(30px, 30px, auto, auto, static);
+      @include mask-image(url("../../icons/stack.svg#icon_plus"));
+      display: block;
+      margin: 0 auto 23px;
+      background-color: $fifth-bg-color;
+    }
+  }
+
+  .product__title {
+    color: $third-title-color;
+  }
+
+  .product__description {
+    margin-bottom: 21px;
+  }
 }

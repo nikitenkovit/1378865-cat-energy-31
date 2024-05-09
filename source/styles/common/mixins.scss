@@ -7,3 +7,26 @@
     src: $font-src;
   }
 }
+
+@mixin pseudo-element($width: 100%, $height: auto, $top: 0, $left: 0, $position: absolute) {
+  content: "";
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin mask-image($url, $repeat: no-repeat, $position: center, $object-fit: cover) {
+  mask-image: $url;
+  mask-repeat: $repeat;
+  mask-position: $position;
+  object-fit: contain;
+}
+
+@mixin background-image-set($set, $repeat: no-repeat, $position: center, $object-fit: cover) {
+  background-image: $set;
+  background-repeat: $repeat;
+  background-position: $position;
+  object-fit: $object-fit;
+}
