@@ -1,0 +1,1 @@
+var a="main-navigation__menu-toggle",n="main-navigation__menu-toggle--active",o="main-navigation__list",i="main-navigation__list--active",t=document.querySelector(`.${a}`),s=document.querySelector(`.${o}`);t.classList.remove(n);s.classList.remove(i);var c=e=>{e.preventDefault(),t.classList.toggle(n),s.classList.toggle(i)};t.addEventListener("click",c);
