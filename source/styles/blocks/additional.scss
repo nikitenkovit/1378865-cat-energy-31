@@ -1,10 +1,73 @@
 .additional {
+  &__wrapper {
+    padding-top: 25px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 74px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      display: grid;
+      grid-template-rows: [additional-title-row] auto [additional-content-row] auto;
+      grid-template-columns: [additional-column] 1fr [gift-column] 245px;
+      gap: 80px;
+      padding-top: 69px;
+    }
+  }
+
   &__title {
-    font-family: $secondary-font;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    color: $primary-title-color;
+    @media (min-width: $breakpoint-desktop) {
+      grid-area: additional-title-row / additional-column / additional-title-row gift-column;
+    }
+  }
+
+  &__list {
+    margin-top: 35px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 80px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      grid-area: additional-content-row / additional-column / additional-content-row / additional-column;
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    padding: 12px 0 19px;
+    border-top: 1px solid $primary-border-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 26px 38px 27px;
+      border-left: 1px solid $primary-border-color;
+      border-right: 1px solid $primary-border-color;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      display: grid;
+      grid-template-columns: 1fr 244px;
+      gap: 41px;
+      padding: 15px 0 16px;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  &__item:last-child {
+    border-bottom: 1px solid $primary-border-color;
+  }
+
+  &__item-container {
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      align-items: center;
+    }
   }
 
   &__item-name {
@@ -12,49 +75,160 @@
     font-size: 16px;
     line-height: 16px;
     color: $fourth-title-color;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &__info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+
+    @media (min-width: $breakpoint-tablet) {
+      gap: 50px;
+      margin-top: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      min-width: 285px;
+    }
   }
 
   &__info {
     font-family: $primary-font;
     font-size: 14px;
     line-height: 14px;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      text-align: left;
+    }
   }
 
-  &__gift {
-    position: relative;
-    min-height: 290px;
-    padding-top: 187px;
+  &__info--price {
+    @media (min-width: $breakpoint-tablet) {
+      min-width: 42px;
+      text-align: right;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 15px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 25px;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: 0;
+    }
+  }
+}
+
+.additional__gift {
+  position: relative;
+  min-height: 290px;
+  margin-top: 35px;
+  padding-top: 187px;
+
+  &::before {
+    @include pseudo-element(100%, 100%);
+    @include background-image-set(
+      image-set(
+        url("../../images/additional/additional-bg-mobile@2x.png") type("image/png") 2x,
+        url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x,
+      )
+    );
+    background-size: cover;
+    z-index: -2;
+  }
+
+  &::after {
+    @include pseudo-element(100%, 100%);
+    background-color: rgba($primary-bg-color, 0.85);
+    z-index: -1;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    display: grid;
+    min-height: 200px;
+    margin-top: 70px;
+    padding-top: 71px;
+    padding-right: 125px;
 
     &::before {
-      @include pseudo-element(100%, 290px);
-      @include background-image-set(
+      background-image:
         image-set(
-          url("../../images/additional/additional-bg-mobile@2x.png") type("image/png") 2x,
-          url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x,
-        )
-      );
-      z-index: -2;
-    }
-
-    &::after {
-      @include pseudo-element(100%, 290px);
-      background-color: rgba($primary-bg-color, 0.85);
-      z-index: -1;
+          url("../../images/additional/additional-bg-tablet@2x.png") type("image/png") 2x,
+          url("../../images/additional/additional-bg-tablet@1x.png") type("image/png") 1x
+        );
     }
   }
 
-  &__gift-text {
-    font-family: $primary-font;
-    font-size: 16px;
-    line-height: 20px;
-    color: $secondary-title-color;
+  @media (min-width: $breakpoint-desktop) {
+    grid-area: additional-content-row / gift-column / additional-content-row / gift-column;
+    min-height: 288px;
+    margin: 0;
+    padding: 185px 0 0;
+
+    &::before {
+      background-image:
+        image-set(
+          url("../../images/additional/additional-bg-mobile@2x.png") type("image/png") 2x,
+          url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x
+        );
+      background-position: right;
+    }
+  }
+}
+
+.additional__gift-text {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $secondary-title-color;
+  text-align: center;
+
+  &::before {
+    @include pseudo-element(78px, 80px, 60px, 50%);
+    @include mask-image(url("../../icons/stack.svg#icon_gift"));
+    background-color: $secondary-title-color;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: auto;
+    text-align: left;
+
+    &::before {
+      @include pseudo-element(80px, 82.57px, 50%, 77px);
+      transform: translate(0, -50%);
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 0 auto;
     text-align: center;
 
     &::before {
-      @include pseudo-element(78px, 80px, 60px, 50%);
-      @include mask-image(url("../../icons/stack.svg#icon_gift"));
-      background-color: $secondary-title-color;
-      transform: translateX(-50%);
+      @include pseudo-element(80px, 83px, 56px, 83px);
+      transform: translate(0);
     }
   }
 }

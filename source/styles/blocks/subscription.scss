@@ -1,28 +1,78 @@
 .subscription {
-  &__title {
-    font-family: $secondary-font;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    color: $primary-title-color;
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 81px;
+      padding-bottom: 79px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: 96px;
+      padding-bottom: 104px;
+    }
   }
 
   &__subtitle {
+    margin-top: 32px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
     color: $primary-title-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 632px;
+      margin: 66px auto 0;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 100%;
+      margin: 72px 0 0;
+    }
+  }
+
+  &__form {
+    margin-top: 24px;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: grid;
+      grid-template-columns: 1fr 256px;
+      width: 632px;
+      margin: 24px auto 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 752px;
+    }
   }
 
   &__input {
+    width: 100%;
     padding: 13px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 20px;
     line-height: 29.64px;
-    text-align: center;
+    text-align: left;
     color: $primary-text-color;
+    text-transform: uppercase;
+    border: 1px solid $primary-border-color;
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 15px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 0;
+    }
   }
 }

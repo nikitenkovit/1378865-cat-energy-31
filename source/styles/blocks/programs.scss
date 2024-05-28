@@ -1,73 +1,70 @@
 .programs {
+  &__wrapper {
+    padding-top: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: 82px;
+    }
+  }
+
   &__list {
     display: grid;
     gap: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      gap: 30px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
   }
 
   &__title {
-    position: relative;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: min-content auto;
+    margin-left: 70px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 24px;
     line-height: 37px;
     text-transform: uppercase;
     text-align: left;
-    align-items: center;
     color: $primary-title-color;
 
-    &::before {
-      @include pseudo-element(50px, 50px, auto, auto, static);
-      display: block;
-      background-color: $primary-bg-color;
-      border-radius: 50%;
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 0;
+      font-size: 36px;
+      line-height: 36px;
     }
 
-    &::after {
-      @include pseudo-element(50px, 50px, auto, 0);
-      @include mask-image(url("../../icons/stack.svg#cat-slim"));
-      bottom: 3px;
-      background-color: $primary-title-color;
-    }
-  }
-
-  &__description {
-    position: relative;
-    margin-top: 22px;
-    margin-bottom: 38px;
-    font-family: $primary-font;
-    font-size: 14px;
-    line-height: 18px;
-    color: $primary-text-color;
-
-    &::after {
-      @include pseudo-element(100%, 1, auto);
-      bottom: -23px;
-      background-color: $fourth-bg-color;
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 162px;
     }
   }
 
   &__link {
     display: flex;
-    gap: 15px;
+    gap: 13px;
     align-items: center;
     width: max-content;
+    margin-top: 14px;
+    padding: 4px 0;
     font-family: $secondary-font;
-    font-size: 20px;
-    line-height: 29.64px;
-    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
     text-transform: uppercase;
-    text-decoration: none;
     color: $primary-title-color;
 
     &::after {
-      @include pseudo-element(24px, 10px, auto, auto, static);
+      @include pseudo-element(28px, 12px, auto, auto, static);
       @include mask-image(url("../../icons/stack.svg#icon_arrow"));
       display: block;
       background-color: $primary-title-color;
-      transition: width 0.5s, transform 0.5s;
+      transition: width 0.3s, transform 0.3s;
     }
 
     &:hover {
@@ -84,19 +81,129 @@
         background-color: rgba($primary-title-color, 0.3);
       }
     }
+
+    @media (min-width: $breakpoint-tablet) {
+      gap: 25px;
+      margin-top: 0;
+      font-size: 20px;
+      line-height: normal;
+    }
   }
 }
 
 .programs__item {
   position: relative;
-  padding: 24px 20px 18px;
+  padding: 30px 20px 18px;
   background-color: $secondary-bg-color;
 
-  &--pro .programs__title {
-    &::after {
-      @include pseudo-element(67px, 28px, auto, -8px);
-      @include mask-image(url("../../icons/stack.svg#cat-pro"));
-      bottom: 11px;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 77px 52px 55px;
+  }
+
+  &::before {
+    @include pseudo-element(50px, 50px, 24px, 20px);
+    display: block;
+    background-color: $primary-bg-color;
+    border-radius: 50%;
+    z-index: 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      top: 92px;
+      left: auto;
+      right: 63px;
+      width: 200px;
+      height: 200px;
     }
+
+    @media (min-width: $breakpoint-desktop) {
+      top: 47px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    @include pseudo-element(36px, 50px, 21px, 27px);
+    @include mask-image(url("../../icons/stack.svg#cat-slim"));
+    bottom: 3px;
+    background-color: $primary-title-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      top: 81px;
+      left: auto;
+      right: 93px;
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      top: 41px;
+      left: 67px;
+      right: auto;
+      width: 70px;
+      height: 97px;
+    }
+  }
+}
+
+.programs__item--pro {
+  &::after {
+    @include pseudo-element(67px, 28px, 35px, 11px);
+    @include mask-image(url("../../icons/stack.svg#cat-pro"));
+
+    @media (min-width: $breakpoint-tablet) {
+      top: 135px;
+      left: auto;
+      right: 29px;
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      top: 67px;
+      left: 33px;
+      right: auto;
+      width: 134px;
+      height: 56px;
+    }
+  }
+}
+
+.programs__description {
+  position: relative;
+  margin-top: 28px;
+  padding-bottom: 23px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $primary-text-color;
+
+  &::after {
+    @include pseudo-element(100%, 1, auto);
+    bottom: 0;
+    background-color: $fourth-bg-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 73px;
+    margin-bottom: 23px;
   }
 }

@@ -1,38 +1,210 @@
 .example {
   background-color: $third-bg-color;
 
+  @media (min-width: $breakpoint-tablet) {
+    position: relative;
+    background-color: $sixth-bg-color;
+    border-top: 1px solid $seventh-bg-color;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background-color: transparent;
+    border: none;
+  }
+
+  &::after {
+    display: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      @include pseudo-element(100%, 462px, auto);
+      display: block;
+      bottom: 0;
+      background-color: $third-bg-color;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: $secondary-bg-color;
+      z-index: -1;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 45px;
+      padding-bottom: 101px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 65px;
+    }
+  }
+
   &__title {
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 36px;
     line-height: 40px;
     color: $primary-title-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   &__description {
+    margin-top: 40px;
     font-family: $primary-font;
     font-size: 14px;
     line-height: 18px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 60px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 436px;
+      margin-top: 146px;
+    }
+  }
+
+  &__description-br {
+    display: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+    }
+  }
+
+  &__container {
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: grid;
+      grid-template-columns: auto 174px;
+      align-items: center;
+      margin-top: 55px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-top: 69px;
+      grid-template-columns: auto;
+      grid-template-rows: max-content min-content;
+      gap: 55px;
+      justify-content: start;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 31px;
+
+    @media (min-width: $breakpoint-tablet) {
+      grid-template-columns: max-content max-content;
+      gap: 43px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      gap: 42px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 162px;
+    }
   }
 
   &__term {
+    min-width: 124px;
+    padding: 15px 10px;
     font-family: $secondary-font;
     font-size: 24px;
-    line-height: 34px;
+    line-height: 24px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
     color: $primary-title-color;
+    border: 1px solid $primary-border-color;
+    border-radius: 3px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 15px 10px 18px;
+      font-size: 30px;
+      line-height: 37px;
+      min-width: 162px;
+    }
   }
 
   &__definition {
+    width: calc(100% - 35px);
+    margin: -9px auto 0;
+    padding: 0 5px;
     font-family: $primary-font;
     font-size: 12px;
     line-height: 12px;
+    text-transform: lowercase;
+    overflow-wrap: anywhere;
+    background-color: $third-bg-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: fit-content;
+      max-width: calc(100% - 10px);
+      padding: 0 9px;
+      font-size: 14px;
+      line-height: 14px;
+      background-color: $sixth-bg-color;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: $secondary-bg-color;
+    }
   }
 
   &__costs {
+    margin-top: 20px;
     font-family: $secondary-font;
     font-size: 14px;
     line-height: 20px;
+    text-transform: uppercase;
     text-align: center;
     color: $primary-title-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 0;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: right;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      gap: 63px;
+      text-align: start;
+    }
+  }
+
+  &__slider {
+    margin: 20px auto 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin: 99px auto 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      top: 0;
+      right: 0;
+      margin: 0;
+    }
   }
 }

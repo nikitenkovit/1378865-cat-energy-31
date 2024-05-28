@@ -1,6 +1,46 @@
 .contact {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  min-height: 474px;
+
+  @media (min-width: $breakpoint-tablet) {
+    min-height: 600px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    min-height: 400px;
+  }
+
   &--background {
     background-color: $secondary-bg-color;
+  }
+
+  &__wrapper {
+    width: 100%;
+
+    @media (min-width: $breakpoint-desktop) {
+      position: relative;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      min-height: 200px;
+      padding: 60px 40px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      position: absolute;
+      top: 95px;
+      left: 0;
+      width: 565px;
+      padding: 60px 79px 60px 80px;
+      background-color: $sixth-bg-color;
+    }
   }
 
   &__title {
@@ -10,15 +50,57 @@
     line-height: 20px;
     text-transform: uppercase;
     color: $third-title-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   &__address {
     font-family: $primary-font;
     font-size: 14px;
     line-height: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: right;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 45px;
+      text-align: left;
+    }
+  }
+
+  &__address-city {
+    display: block;
   }
 
   &__map {
+    @include background-image-set(
+      image-set(
+        url("../../images/map/location-moble@2x.png") type("image/png") 2x,
+        url("../../images/map/location-moble@1x.png") type("image/png") 1x,
+      ),
+    );
+    display: block;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-width: $breakpoint-tablet) {
+      background-image: image-set(url("../../images/map/location-tablet@2x.png") type("image/png") 2x, url("../../images/map/location-tablet@1x.png") type("image/png") 1x);
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-image: image-set(url("../../images/map/location-desctop@2x.png") type("image/png") 2x, url("../../images/map/location-desctop@1x.png") type("image/png") 1x);
+    }
   }
 }

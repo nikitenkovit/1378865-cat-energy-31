@@ -1,5 +1,116 @@
 .main-navigation {
+  display: grid;
+  align-items: center;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 11px;
+  }
+
+  &__menu-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 3;
+
+    &::before {
+      @include pseudo-element(100%, 2px);
+      background-color: $eight-bg-color;
+      box-shadow: 0 11px 0 0 $eight-bg-color;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      @include pseudo-element(100%, 2px, auto);
+      bottom: 0;
+      background-color: $eight-bg-color;
+      transition: all 0.3s;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-toggle--active {
+    &::before {
+      box-shadow: none;
+      top: 50%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: -250%;
+    width: 100%;
+    background-color: $sixth-bg-color;
+    transition: top 0.3s;
+    z-index: 1;
+
+
+    &:last-child {
+      border-bottom: 1px solid $seventh-bg-color;
+    }
+
+    &--active {
+      top: 100%;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      gap: 36px;
+      padding-top: 11px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: 0;
+      gap: 35px;
+      background-color: transparent;
+    }
+  }
+
+  &__item {
+    @media (min-width: $breakpoint-tablet) {
+      padding-bottom: 8px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-bottom: 6px;
+    }
+  }
+
+  &__item--current {
+    @media (min-width: $breakpoint-tablet) {
+      border-bottom: 2px solid $primary-bg-color;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      border-bottom: 2px solid $secondary-title-color;
+    }
+  }
+
+  &__item--current-contrast {
+    @media (min-width: $breakpoint-desktop) {
+      border-bottom: 2px solid $primary-bg-color;
+    }
+  }
+
   &__link {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 24px;
     font-family: $secondary-font;
     font-size: 20px;
     line-height: 20px;
@@ -7,5 +118,54 @@
     text-decoration: none;
     text-align: center;
     color: $primary-title-color;
+    border-top: 1px solid $seventh-bg-color;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 18px;
+      line-height: 24px;
+      border-top: none;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 20px;
+      line-height: 29.64px;
+      color: $secondary-title-color;
+    }
+  }
+
+  &__link--contrast {
+    @media (min-width: $breakpoint-desktop) {
+      color: $third-title-color;
+    }
+  }
+
+  &__item--current &__link {
+    pointer-events: none;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }

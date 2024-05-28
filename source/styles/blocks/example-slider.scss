@@ -1,0 +1,110 @@
+$active-color-condition: #5eaa2f;
+
+.example-slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    position: absolute;
+  }
+
+  &__before,
+  &__after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $third-bg-color;
+    overflow: hidden;
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: $secondary-bg-color;
+    }
+  }
+
+  &__before::before,
+  &__after::before {
+    @media (min-width: $breakpoint-tablet) {
+      @include pseudo-element(100%, 151px);
+      background-color: $sixth-bg-color;
+      z-index: -1;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      height: 133px;
+    }
+  }
+
+  &__before {
+    width: 50%;
+    z-index: 2;
+  }
+
+  &__after {
+    z-index: 1;
+  }
+
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: $third-border-color;
+    border-radius: 2px;
+    z-index: 3;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid $third-border-color;
+    border-radius: 50%;
+    background-color: $sixth-bg-color;
+    cursor: pointer;
+    z-index: 3;
+
+    &::before {
+      @include pseudo-element(24px, 18px, 50%, 50%);
+      @include mask-image(url("../../icons/stack.svg#icon_slider_button"));
+      transform: translate(-50%, -50%);
+      background-color: $third-border-color;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+
+  &__button:hover {
+    border-color: $primary-bg-color;
+
+    &::before {
+      background-color: $primary-bg-color;
+    }
+  }
+
+  &__button:active {
+    border-color: $active-color-condition;
+
+    &::before {
+      background-color: $active-color-condition;
+    }
+  }
+
+  &__line:has(&__button:hover) {
+    background-color: $primary-bg-color;
+  }
+
+  &__line:has(&__button:active) {
+    background-color: $active-color-condition;
+  }
+}

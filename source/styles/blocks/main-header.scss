@@ -1,5 +1,81 @@
 .main-header {
+  position: relative;
+  background-color: $sixth-bg-color;
+
+  &::before {
+    @include pseudo-element(100%, 100%);
+    z-index: 2;
+    background-color: $sixth-bg-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background-color: transparent;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 14px;
+
+    @media (min-width: $breakpoint-tablet) {
+      align-items: center;
+      padding-top: 25px;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: 55px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    z-index: 3;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__link--current {
+    pointer-events: none;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &__logo {
+    display: block;
+  }
+
   &__logo-text-mobile {
+    margin-left: 56px;
+
     @media (min-width: $breakpoint-tablet) {
       display: none;
     }
