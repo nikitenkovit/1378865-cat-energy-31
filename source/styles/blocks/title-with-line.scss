@@ -1,0 +1,37 @@
+.title-with-line {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $primary-title-color;
+  box-shadow: 40px 0 0 $sixth-bg-color;
+  background-color: $sixth-bg-color;
+
+  &::after {
+    @include pseudo-element(100vw, 2px, 0.42em, auto);
+    right: 0;
+    box-shadow: 100vw 0 0 $primary-bg-color;
+    z-index: -1;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-left: 40px;
+    font-size: 32px;
+    line-height: 32px;
+
+    &::after {
+      background-color: $primary-bg-color;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding-left: 0;
+    font-size: 40px;
+    line-height: 40px;
+    box-shadow: 40px 0 0 $sixth-bg-color, -40px 0 0 $sixth-bg-color;
+  }
+}

@@ -21,12 +21,10 @@
   mask-image: $url;
   mask-repeat: $repeat;
   mask-position: $position;
-  object-fit: contain;
 }
 
 @mixin background-image-set($set, $repeat: no-repeat, $position: center, $object-fit: cover) {
   background-image: $set;
   background-repeat: $repeat;
   background-position: $position;
-  object-fit: $object-fit;
 }

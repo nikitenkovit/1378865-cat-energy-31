@@ -1,0 +1,66 @@
+.social-list {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  max-width: 100%;
+  padding: 19px 0;
+  border-top: 1px solid $secondary-border-color;
+  border-bottom: 1px solid $secondary-border-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    gap: 24px;
+    margin-left: 43px;
+    padding: 0;
+    border: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 22px;
+
+    &--vkontakte::before {
+      @include mask-image(url("../../icons/stack.svg#icon_vkontakte"));
+      content: "";
+      width: 27px;
+      height: 17px;
+      background-color: $third-border-color;
+    }
+
+    &--youtube::before {
+      @include mask-image(url("../../icons/stack.svg#icon_youtube"));
+      content: "";
+      width: 24px;
+      height: 18px;
+      background-color: $third-border-color;
+    }
+
+    &--telegram::before {
+      @include mask-image(url("../../icons/stack.svg#icon_telegram"));
+      content: "";
+      width: 20px;
+      height: 17px;
+      background-color: $third-border-color;
+    }
+  }
+
+  &__link:hover {
+    &::before {
+      background-color: $primary-bg-color;
+    }
+  }
+
+  &__link:active {
+    opacity: 0.4;
+  }
+}

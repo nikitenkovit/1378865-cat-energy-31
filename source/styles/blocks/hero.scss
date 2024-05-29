@@ -4,31 +4,129 @@
   text-align: center;
   color: $secondary-title-color;
 
-  &::before {
-    @include pseudo-element(100%, 302px);
-    @include background-image-set(
-      image-set(
-        url("../../images/hero/hero-bg-cat-mobile@2x.png") type("image/png") 2x,
-        url("../../images/hero/hero-bg-cat-mobile@1x.png") type("image/png") 1x,
-      )
-    );
-    z-index: -2;
+  @media (min-width: $breakpoint-desktop) {
+    position: static;
   }
 
-  &::after {
-    @include pseudo-element(100%, 302px);
-    background-color: rgba($primary-bg-color, 0.85);
+  &::before {
+    @include pseudo-element(100%, auto);
+    background-image:
+      linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
+      image-set(
+        url("../../images/hero/hero-bg-cat-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/hero/hero-bg-cat-mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/hero/hero-bg-cat-mobile@2x.png") type("image/png") 2x,
+        url("../../images/hero/hero-bg-cat-mobile@1x.png") type("image/png") 1x,
+      );
+    background-repeat: no-repeat;
+    display: block;
+    min-height: 302px;
+    background-size: 100%;
     z-index: -1;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-image:
+        linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
+        image-set(
+          url("../../images/hero/hero-bg-cat-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/hero/hero-bg-cat-desktop@1x.webp") type("image/webp") 1x,
+          url("../../images/hero/hero-bg-cat-desktop@2x.png") type("image/png") 2x,
+          url("../../images/hero/hero-bg-cat-desktop@1x.png") type("image/png") 1x,
+        );
+      display: block;
+      width: 50vw;
+      height: 694px;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-top: 27px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 65px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      min-height: 580px;
+      padding-top: 110px;
+    }
   }
 
   &__title {
-    font-weight: 400;
-    font-size: 35px;
+    font-size: 36px;
     line-height: 36px;
+    font-weight: 400;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 90px;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+      color: $primary-title-color;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 80px;
+    }
   }
 
   &__description {
+    margin-top: 25px;
     font-size: 14px;
     line-height: 14px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 40px;
+      margin-left: 90px;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      color: $primary-title-color;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 80px;
+    }
+  }
+
+  &__image {
+    margin: 29px auto 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 21px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      position: absolute;
+      top: 29px;
+      left: 447px;
+      margin-top: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 3px;
+
+    @media (min-width: $breakpoint-tablet) {
+      position: absolute;
+      top: 295px;
+      left: 120px;
+      width: 244px;
+      margin-top: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      position: static;
+      margin-top: 52px;
+      margin-left: 80px;
+    }
   }
 }
