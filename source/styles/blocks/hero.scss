@@ -13,6 +13,8 @@
     background-image:
       linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
       image-set(
+        url("../../images/hero/hero-bg-cat-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/hero/hero-bg-cat-mobile@1x.webp") type("image/webp") 1x,
         url("../../images/hero/hero-bg-cat-mobile@2x.png") type("image/png") 2x,
         url("../../images/hero/hero-bg-cat-mobile@1x.png") type("image/png") 1x,
       );
@@ -30,6 +32,8 @@
       background-image:
         linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
         image-set(
+          url("../../images/hero/hero-bg-cat-desktop@2x.webp") type("image/webp") 2x,
+          url("../../images/hero/hero-bg-cat-desktop@1x.webp") type("image/webp") 1x,
           url("../../images/hero/hero-bg-cat-desktop@2x.png") type("image/png") 2x,
           url("../../images/hero/hero-bg-cat-desktop@1x.png") type("image/png") 1x,
         );

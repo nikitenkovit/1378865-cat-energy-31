@@ -53,22 +53,6 @@
     }
   }
 
-  &__link--current {
-    pointer-events: none;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &:focus {
-      opacity: 1;
-    }
-
-    &:active {
-      opacity: 1;
-    }
-  }
-
   &__logo {
     display: block;
   }

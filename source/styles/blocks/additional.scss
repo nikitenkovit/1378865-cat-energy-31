@@ -11,7 +11,7 @@
       grid-template-rows: [additional-title-row] auto [additional-content-row] auto;
       grid-template-columns: [additional-column] 1fr [gift-column] 245px;
       gap: 80px;
-      padding-top: 69px;
+      padding-top: 71px;
     }
   }
 
@@ -90,11 +90,12 @@
 
     @media (min-width: $breakpoint-tablet) {
       gap: 50px;
-      margin-top: 0;
+      margin-top: 1px;
     }
 
     @media (min-width: $breakpoint-desktop) {
       min-width: 285px;
+      margin-top: 5px;
     }
   }
 
@@ -129,7 +130,7 @@
     margin-top: 15px;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 25px;
+      margin-top: 24px;
       font-size: 16px;
       line-height: 20px;
       padding: 10px 0;
@@ -149,20 +150,17 @@
 
   &::before {
     @include pseudo-element(100%, 100%);
-    @include background-image-set(
+    background-image:
+      linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
       image-set(
+        url("../../images/additional/additional-bg-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/additional/additional-bg-mobile@1x.webp") type("image/webp") 1x,
         url("../../images/additional/additional-bg-mobile@2x.png") type("image/png") 2x,
         url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x,
-      )
-    );
+      );
+    background-repeat: no-repeat;
     background-size: cover;
     z-index: -2;
-  }
-
-  &::after {
-    @include pseudo-element(100%, 100%);
-    background-color: rgba($primary-bg-color, 0.85);
-    z-index: -1;
   }
 
   @media (min-width: $breakpoint-tablet) {
@@ -174,9 +172,12 @@
 
     &::before {
       background-image:
+        linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
         image-set(
+          url("../../images/additional/additional-bg-tablet@2x.webp") type("image/webp") 2x,
+          url("../../images/additional/additional-bg-tablet@1x.webp") type("image/webp") 1x,
           url("../../images/additional/additional-bg-tablet@2x.png") type("image/png") 2x,
-          url("../../images/additional/additional-bg-tablet@1x.png") type("image/png") 1x
+          url("../../images/additional/additional-bg-tablet@1x.png") type("image/png") 1x,
         );
     }
   }
@@ -189,9 +190,12 @@
 
     &::before {
       background-image:
+        linear-gradient(rgba($primary-bg-color, 0.85), rgba($primary-bg-color, 0.85)),
         image-set(
+          url("../../images/additional/additional-bg-mobile@2x.webp") type("image/webp") 2x,
+          url("../../images/additional/additional-bg-mobile@1x.webp") type("image/webp") 1x,
           url("../../images/additional/additional-bg-mobile@2x.png") type("image/png") 2x,
-          url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x
+          url("../../images/additional/additional-bg-mobile@1x.png") type("image/png") 1x,
         );
       background-position: right;
     }

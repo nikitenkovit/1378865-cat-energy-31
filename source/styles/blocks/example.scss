@@ -40,7 +40,7 @@
     @media (min-width: $breakpoint-desktop) {
       position: relative;
       padding-top: 0;
-      padding-bottom: 65px;
+      padding-bottom: 70px;
     }
   }
 
@@ -97,7 +97,7 @@
       margin-top: 69px;
       grid-template-columns: auto;
       grid-template-rows: max-content min-content;
-      gap: 55px;
+      gap: 53px;
       justify-content: start;
     }
   }
@@ -180,7 +180,7 @@
     color: $primary-title-color;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 0;
+      margin-top: -5px;
       font-size: 20px;
       line-height: 28px;
       text-align: right;
@@ -189,7 +189,8 @@
     @media (min-width: $breakpoint-desktop) {
       display: grid;
       grid-template-columns: max-content max-content;
-      gap: 63px;
+      gap: 65px;
+      margin-top: 0;
       text-align: start;
     }
   }

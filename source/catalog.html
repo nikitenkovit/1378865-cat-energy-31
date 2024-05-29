@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Cat energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" type="module" async></script>
+    <script src="scripts/nav.js" defer></script>
   </head>
 
   <body class="page__body">
@@ -47,8 +50,13 @@
           <ul class="products__list">
             <li class="products__item product">
               <div class="product__wrapper">
-                  <a class="product__image-link" href="#">
+                  <a class="product__image-link" href="CatEnergyPRO500.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/chicken-desctop-500@1x.webp 1x, images/products/chicken-desctop-500@2x.webp 2x"  width="161" height="172">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/chicken-tablet-500@1x.webp 1x, images/products/chicken-tablet-500@2x.webp 2x" width="161" height="173">
+                    <source type="image/webp" srcset="images/products/chicken-mobile-500@1x.webp 1x, images/products/chicken-mobile-500@2x.webp 2x" width="68" height="87">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/chicken-desctop-500@1x.png 1x, images/products/chicken-desctop-500@2x.png 2x"  width="161" height="172">
                     <source type="image/png" media="(min-width: 768px)"
@@ -59,7 +67,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergyPRO500.html">
                     <h3 class="product__title">Cat Energy PRO 500 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -78,14 +86,19 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
             </li>
 
-            <li class="products__item product">
+            <li class="products__item product" id="catalog-pro">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#">
+                <a class="product__image-link" href="CatEnergyPRO1000.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/chicken-desctop-1000@1x.webp 1x, images/products/chicken-desctop-1000@2x.webp 2x" width="169" height="196">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/chicken-tablet-1000@1x.webp 1x, images/products/chicken-tablet-1000@2x.webp 2x" width="168" height="206">
+                    <source type="image/webp" srcset="images/products/chicken-mobile-1000@1x.webp 1x, images/products/chicken-mobile-1000@2x.webp 2x" width="84" height="101">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/chicken-desctop-1000@1x.png 1x, images/products/chicken-desctop-1000@2x.png 2x" width="169" height="196">
                     <source type="image/png" media="(min-width: 768px)"
@@ -96,7 +109,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergyPRO1000.html">
                     <h3 class="product__title">Cat Energy PRO 1000 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -115,15 +128,20 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
 
             </li>
 
             <li class="products__item product">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#">
+                <a class="product__image-link" href="CatEnergyPRO500.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/fish-desctop-500@1x.webp 1x, images/products/fish-desctop-500@2x.webp 2x" width="163" height="174">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/fish-tablet-500@1x.webp 1x, images/products/fish-tablet-500@2x.webp 2x" width="164" height="175">
+                    <source type="image/webp" srcset="images/products/fish-mobile-500@1x.webp 1x, images/products/fish-mobile-500@2x.webp 2x" width="68" height="79">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/fish-desctop-500@1x.png 1x, images/products/fish-desctop-500@2x.png 2x" width="163" height="174">
                     <source type="image/png" media="(min-width: 768px)"
@@ -133,7 +151,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergyPRO500.html">
                     <h3 class="product__title">Cat Energy PRO 500 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -152,14 +170,19 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
             </li>
 
             <li class="products__item product">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#">
+                <a class="product__image-link" href="CatEnergyPRO1000.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/fish-desctop-1000@1x.webp 1x, images/products/fish-desctop-1000@2x.webp 2x" width="169" height="196">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/fish-tablet-1000@1x.webp 1x, images/products/fish-tablet-1000@2x.webp 2x" width="168" height="200">
+                    <source type="image/webp" srcset="images/products/fish-mobile-1000@1x.webp 1x, images/products/fish-mobile-1000@2x.webp 2x" width="84" height="101">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/fish-desctop-1000@1x.png 1x, images/products/fish-desctop-1000@2x.png 2x" width="169" height="196">
                     <source type="image/png" media="(min-width: 768px)"
@@ -169,7 +192,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergyPRO1000.html">
                     <h3 class="product__title">Cat Energy PRO 1000 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -188,14 +211,19 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
             </li>
 
-            <li class="products__item product">
+            <li class="products__item product" id="catalog-slim">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#">
+                <a class="product__image-link" href="CatEnergySlim500.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/buckwheat-desctop-500@1x.webp 1x, images/products/buckwheat-desctop-500@2x.webp 2x" width="161" height="172">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/buckwheat-tablet-500@1x.webp 1x, images/products/buckwheat-tablet-500@2x.webp 2x" width="162" height="172">
+                    <source type="image/webp" srcset="images/products/buckwheat-mobile-500@1x.webp 1x, images/products/buckwheat-mobile-500@2x.webp 2x" width="68" height="79">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/buckwheat-desctop-500@1x.png 1x, images/products/buckwheat-desctop-500@2x.png 2x" width="161" height="172">
                     <source type="image/png" media="(min-width: 768px)"
@@ -206,7 +234,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergySlim500.html">
                     <h3 class="product__title">Cat Energy Slim 500 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -225,14 +253,19 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
             </li>
 
             <li class="products__item product">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#">
+                <a class="product__image-link" href="CatEnergySlim1000.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/buckwheat-desctop-1000@1x.webp 1x, images/products/buckwheat-desctop-1000@2x.webp 2x" width="169" height="196">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/buckwheat-tablet-1000@1x.webp 1x, images/products/buckwheat-tablet-1000@2x.webp 2x" width="168" height="200">
+                    <source type="image/webp" srcset="images/products/buckwheat-mobile-1000@1x.webp 1x, images/products/buckwheat-mobile-1000@2x.webp 2x" width="84" height="101">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/buckwheat-desctop-1000@1x.png 1x, images/products/buckwheat-desctop-1000@2x.png 2x" width="169" height="196">
                     <source type="image/png" media="(min-width: 768px)"
@@ -244,7 +277,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergySlim1000.html">
                     <h3 class="product__title">Cat Energy Slim 1000 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -263,14 +296,20 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
             </li>
 
             <li class="products__item product">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#">
+                <a class="product__image-link" href="CatEnergySlim500.html">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                            srcset="images/products/rice-desctop-500@1x.webp 1x, images/products/rice-desctop-500@2x.webp 2x" width="163" height="174">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/rice-tablet-500@1x.webp 1x, images/products/rice-tablet-500@2x.webp 2x" width="164" height="175">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="images/products/rice-mobile-500@1x.webp 1x, images/products/rice-mobile-500@2x.webp 2x" width="72" height="85">
                     <source type="image/png" media="(min-width: 1440px)"
                             srcset="images/products/rice-desctop-500@1x.png 1x, images/products/rice-desctop-500@2x.png 2x" width="163" height="174">
                     <source type="image/png" media="(min-width: 768px)"
@@ -280,7 +319,7 @@
                   </picture>
                 </a>
                 <div class="product__container">
-                  <a class="product__title-link" href="#">
+                  <a class="product__title-link" href="CatEnergySlim500.html">
                     <h3 class="product__title">Cat Energy Slim 500 г</h3>
                   </a>
                   <dl class="product__info-list">
@@ -299,19 +338,19 @@
                   </dl>
                 </div>
 
-                <button class="product__button button button--primary" type="button">Заказать</button>
+                <a class="product__button button button--primary" href="form.html">Заказать</a>
               </div>
             </li>
 
             <li class="products__item product product--show-more">
               <div class="product__wrapper">
-                <a class="product__image-link" href="#" aria-label="Показать больше товаров"></a>
-                <a class="product__title-link" href="#" aria-label="Показать больше товаров">
+                <a class="product__image-link" href="catalog-all.html" aria-label="Показать больше товаров"></a>
+                <a class="product__title-link" href="catalog-all.html" aria-label="Показать больше товаров">
                   <h3 class="product__title">Показать еще 100500 товаров</h3>
                 </a>
                 <p class="product__description">На самом деле вкусов гораздо больше!</p>
 
-                <button class="product__button button button--secondary" type="button" aria-label="Показать больше товаров">Показать все</button>
+                <a class="product__button button button--secondary" href="catalog-all.html" aria-label="Показать больше товаров">Показать все</a>
               </div>
             </li>
           </ul>
@@ -402,7 +441,6 @@
             </p>
           </div>
         </div>
-        <!--    TODO Если будет время, кастомизировать через API    -->
         <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198525!2d30.32047247784884!3d59.938719162093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1713861891682!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
@@ -424,7 +462,7 @@
           </li>
         </ul>
 
-        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/" aria-label="Сайт HTML Academy">
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener" aria-label="Сайт HTML Academy">
           <span class="main-footer__copyright-text">HTML Academy</span>
         </a>
       </div>
