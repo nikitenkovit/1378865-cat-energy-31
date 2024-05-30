@@ -28,12 +28,13 @@
     align-items: center;
     width: 28px;
     height: 22px;
+    padding-top: 1px;
 
     &--vkontakte::before {
       @include mask-image(url("../../icons/stack.svg#icon_vkontakte"));
       content: "";
-      width: 27px;
-      height: 17px;
+      width: 28px;
+      height: 22px;
       background-color: $third-border-color;
     }
 
@@ -41,15 +42,15 @@
       @include mask-image(url("../../icons/stack.svg#icon_youtube"));
       content: "";
       width: 24px;
-      height: 18px;
+      height: 19px;
       background-color: $third-border-color;
     }
 
     &--telegram::before {
       @include mask-image(url("../../icons/stack.svg#icon_telegram"));
       content: "";
-      width: 20px;
-      height: 17px;
+      width: 22px;
+      height: 18px;
       background-color: $third-border-color;
     }
   }

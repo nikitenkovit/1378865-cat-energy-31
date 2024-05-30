@@ -45,6 +45,7 @@
   }
 
   &__title {
+    margin-bottom: 40px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 36px;
@@ -52,26 +53,31 @@
     color: $primary-title-color;
 
     @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 60px;
       font-size: 60px;
       line-height: 60px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 146px;
     }
   }
 
   &__description {
-    margin-top: 40px;
+    margin-bottom: 20px;
     font-family: $primary-font;
     font-size: 14px;
     line-height: 18px;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 60px;
+      margin-bottom: 55px;
       font-size: 16px;
       line-height: 24px;
     }
 
     @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 69px;
       width: 436px;
-      margin-top: 146px;
     }
   }
 
@@ -84,17 +90,13 @@
   }
 
   &__container {
-    margin-top: 20px;
-
     @media (min-width: $breakpoint-tablet) {
       display: grid;
       grid-template-columns: auto 174px;
       align-items: center;
-      margin-top: 55px;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      margin-top: 69px;
       grid-template-columns: auto;
       grid-template-rows: max-content min-content;
       gap: 53px;
@@ -106,10 +108,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 31px;
+    margin-bottom: 20px;
 
     @media (min-width: $breakpoint-tablet) {
       grid-template-columns: max-content max-content;
       gap: 43px;
+      margin-bottom: 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
@@ -171,7 +175,6 @@
   }
 
   &__costs {
-    margin-top: 20px;
     font-family: $secondary-font;
     font-size: 14px;
     line-height: 20px;

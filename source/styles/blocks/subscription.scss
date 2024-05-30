@@ -14,8 +14,20 @@
     }
   }
 
+  &__title {
+    margin-bottom: 32px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 66px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 72px;
+    }
+  }
+
   &__subtitle {
-    margin-top: 32px;
+    margin-bottom: 24px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 16px;
@@ -25,25 +37,22 @@
 
     @media (min-width: $breakpoint-tablet) {
       width: 632px;
-      margin: 66px auto 0;
+      margin: 0 auto 23px;
       font-size: 24px;
       line-height: 32px;
     }
 
     @media (min-width: $breakpoint-desktop) {
       width: 100%;
-      margin: 72px 0 0;
     }
   }
 
   &__form {
-    margin-top: 24px;
-
     @media (min-width: $breakpoint-tablet) {
       display: grid;
       grid-template-columns: 1fr 256px;
       width: 632px;
-      margin: 24px auto 0;
+      margin: 0 auto;
     }
 
     @media (min-width: $breakpoint-desktop) {
@@ -53,6 +62,7 @@
 
   &__input {
     width: 100%;
+    margin-bottom: 16px;
     padding: 13px;
     font-family: $secondary-font;
     font-weight: 400;
@@ -62,17 +72,16 @@
     color: $primary-text-color;
     text-transform: uppercase;
     border: 1px solid $primary-border-color;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 0;
+    }
   }
 
   &__button {
     width: 100%;
-    margin-top: 16px;
     font-size: 20px;
     line-height: 26px;
     padding: 15px;
-
-    @media (min-width: $breakpoint-tablet) {
-      margin-top: 0;
-    }
   }
 }

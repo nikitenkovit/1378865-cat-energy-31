@@ -1,6 +1,6 @@
 .how-it-works {
   &__wrapper {
-    padding-top: 20px;
+    padding-top: 18px;
     padding-bottom: 49px;
 
     @media (min-width: $breakpoint-tablet) {
@@ -15,6 +15,7 @@
   }
 
   &__title {
+    margin-bottom: 40px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 36px;
@@ -22,6 +23,7 @@
     color: $primary-title-color;
 
     @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 32px;
       font-size: 60px;
       line-height: 60px;
     }
@@ -30,18 +32,17 @@
   &__list {
     display: grid;
     gap: 20px;
-    margin-top: 40px;
 
     @media (min-width: $breakpoint-tablet) {
       grid-template-columns: 1fr 1fr;
       gap: 37px 60px;
-      margin-top: 32px;
       counter-reset: how-it-works-list 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
       display: flex;
       justify-content: space-between;
+      gap: 0;
     }
   }
 
@@ -100,60 +101,84 @@
       z-index: -1;
     }
   }
+}
 
-  &--first {
-    @media (min-width: $breakpoint-tablet) {
-      width: 225px;
-    }
+.how-it-works__item--first {
+  &::before {
+    background-image: url("../../icons/stack.svg#icon_leaf");
+    background-size: 30px 32px;
+  }
 
-    @media (min-width: $breakpoint-tablet) {
-      margin-right: 25px;
-    }
+  @media (min-width: $breakpoint-tablet) {
+    width: 225px;
+  }
 
-    &::before {
-      background-image: url("../../icons/stack.svg#icon_leaf");
-      background-size: 30px 32px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: 25px;
+  }
+}
+
+.how-it-works__item--second {
+  &::before {
+    background-image: url("../../icons/stack.svg#icon_water");
+    background-size: 26px 28px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 250px;
+
+    &::after {
+      right: 5px;
     }
   }
 
-  &--second {
-    @media (min-width: $breakpoint-tablet) {
-      width: 246px;
+  @media (min-width: $breakpoint-desktop) {
+    &::after {
+      right: 0;
     }
+  }
+}
 
-    &::before {
-      background-image: url("../../icons/stack.svg#icon_water");
-      background-size: 26px 28px;
+.how-it-works__item--third {
+  &::before {
+    background-image: url("../../icons/stack.svg#icon_eat");
+    background-size: 25px 30px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 247px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 250px;
+  }
+}
+
+.how-it-works__item--fourth {
+  &::before {
+    background-image: url("../../icons/stack.svg#icon_clock");
+    background-size: 26px 31px;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 245px;
+
+    &::after {
+      right: -5px;
     }
   }
 
-  &--third {
-    @media (min-width: $breakpoint-tablet) {
-      width: 247px;
-    }
-
-    &::before {
-      background-image: url("../../icons/stack.svg#icon_eat");
-      background-size: 25px 30px;
+  @media (min-width: $breakpoint-desktop) {
+    &::after {
+      right: 0;
     }
   }
+}
 
-  &--fourth {
-    @media (min-width: $breakpoint-tablet) {
-      width: 249px;
-    }
+.how-it-works__item--fourth br {
+  display: none;
 
-    &::before {
-      background-image: url("../../icons/stack.svg#icon_clock");
-      background-size: 26px 31px;
-    }
-  }
-
-  &--fourth br {
-    display: none;
-
-    @media (min-width: $breakpoint-tablet) {
-      display: block;
-    }
+  @media (min-width: $breakpoint-tablet) {
+    display: block;
   }
 }

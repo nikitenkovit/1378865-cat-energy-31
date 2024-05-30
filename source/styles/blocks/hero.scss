@@ -63,8 +63,10 @@
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
+    margin-bottom: 25px;
 
     @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 40px;
       margin-left: 90px;
       font-size: 60px;
       line-height: 60px;
@@ -78,13 +80,13 @@
   }
 
   &__description {
-    margin-top: 25px;
+    margin-bottom: 29px;
     font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 40px;
+      margin-bottom: 21px;
       margin-left: 90px;
       font-size: 20px;
       line-height: 20px;
@@ -93,39 +95,35 @@
     }
 
     @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 52px;
       margin-left: 80px;
     }
   }
 
   &__image {
-    margin: 29px auto 0;
+    margin: 0 auto 3px;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 21px;
+      margin-bottom: 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
       position: absolute;
       top: 29px;
       left: 447px;
-      margin-top: 0;
     }
   }
 
   &__button {
-    margin-top: 3px;
-
     @media (min-width: $breakpoint-tablet) {
       position: absolute;
       top: 295px;
       left: 120px;
       width: 244px;
-      margin-top: 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
       position: static;
-      margin-top: 52px;
       margin-left: 80px;
     }
   }

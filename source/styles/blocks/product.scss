@@ -43,29 +43,23 @@ $product-border-color: #ebebeb;
     @media (min-width: $breakpoint-tablet) {
       width: 200px;
       height: 210px;
-      margin: 0 auto;
+      margin: 0 auto 22px;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      padding-top: 0;
       width: 169px;
+      margin-bottom: 13px;
+      padding-top: 0;
     }
   }
 
   &__container {
     grid-area: 1 / 2 / 2 / 3;
-
-    @media (min-width: $breakpoint-tablet) {
-      margin-top: 22px;
-    }
-
-    @media (min-width: $breakpoint-desktop) {
-      margin-top: 13px;
-    }
   }
 
   &__title {
     width: 76px;
+    margin-bottom: 14px;
     font-family: $secondary-font;
     font-weight: 400;
     font-size: 16px;
@@ -76,22 +70,24 @@ $product-border-color: #ebebeb;
 
     @media (min-width: $breakpoint-tablet) {
       width: 135px;
-      margin: 0 auto;
+      margin: 0 auto 20px;
       font-size: 20px;
       line-height: 24px;
       text-align: center;
     }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 23px;
+    }
   }
 
   &__info-list {
-    margin-top: 14px;
-
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 20px;
+      margin-bottom: 34px;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      margin-top: 23px;
+      margin-bottom: 35px;
     }
   }
 
@@ -125,14 +121,9 @@ $product-border-color: #ebebeb;
     width: 100%;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 34px;
       padding: 10px 0;
       font-size: 16px;
       line-height: 20px;
-    }
-
-    @media (min-width: $breakpoint-desktop) {
-      margin-top: 35px;
     }
   }
 }
@@ -170,7 +161,7 @@ $product-border-color: #ebebeb;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      margin-bottom: 37px;
+      margin-bottom: 40px;
     }
   }
 
@@ -195,6 +186,10 @@ $product-border-color: #ebebeb;
     @media (min-width: $breakpoint-tablet) {
       width: 134px;
     }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 10px;
+    }
   }
 
   &__description {
@@ -208,10 +203,6 @@ $product-border-color: #ebebeb;
       margin: 14px auto 0;
       font-size: 16px;
       line-height: 18px;
-    }
-
-    @media (min-width: $breakpoint-desktop) {
-      margin-top: 17px;
     }
   }
 
