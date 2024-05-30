@@ -16,21 +16,28 @@
   }
 
   &__title {
+    margin-bottom: 35px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 80px;
+    }
+
     @media (min-width: $breakpoint-desktop) {
       grid-area: additional-title-row / additional-column / additional-title-row gift-column;
+      margin-bottom: 0;
     }
   }
 
   &__list {
-    margin-top: 35px;
+    margin-bottom: 36px;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 80px;
+      margin-bottom: 70px;
     }
 
     @media (min-width: $breakpoint-desktop) {
       grid-area: additional-content-row / additional-column / additional-content-row / additional-column;
-      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -59,18 +66,24 @@
   }
 
   &__item-container {
+    margin-bottom: 15px;
+
     @media (min-width: $breakpoint-tablet) {
       display: flex;
       justify-content: space-between;
-      align-items: start;
+      align-items: center;
+      margin-bottom: 24px;
     }
 
     @media (min-width: $breakpoint-desktop) {
       align-items: center;
+      margin-bottom: 0;
+      padding-top: 5px;
     }
   }
 
   &__item-name {
+    margin-bottom: 13px;
     font-family: $secondary-font;
     font-size: 16px;
     line-height: 16px;
@@ -78,15 +91,19 @@
     text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 1px;
       font-size: 20px;
       line-height: 20px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 5px;
     }
   }
 
   &__info-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 13px;
 
     @media (min-width: $breakpoint-tablet) {
       gap: 50px;
@@ -95,7 +112,7 @@
 
     @media (min-width: $breakpoint-desktop) {
       min-width: 285px;
-      margin-top: 5px;
+      margin-top: 0;
     }
   }
 
@@ -127,17 +144,11 @@
 
   &__button {
     width: 100%;
-    margin-top: 15px;
 
     @media (min-width: $breakpoint-tablet) {
-      margin-top: 24px;
       font-size: 16px;
       line-height: 20px;
       padding: 10px 0;
-    }
-
-    @media (min-width: $breakpoint-desktop) {
-      margin-top: 0;
     }
   }
 }
@@ -145,7 +156,6 @@
 .additional__gift {
   position: relative;
   min-height: 290px;
-  margin-top: 35px;
   padding-top: 187px;
 
   &::before {
@@ -166,7 +176,6 @@
   @media (min-width: $breakpoint-tablet) {
     display: grid;
     min-height: 200px;
-    margin-top: 70px;
     padding-top: 71px;
     padding-right: 125px;
 

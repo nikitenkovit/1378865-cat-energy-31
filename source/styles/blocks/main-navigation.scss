@@ -64,10 +64,10 @@
 
     @media (min-width: $breakpoint-tablet) {
       position: static;
-      display: grid;
-      grid-template-columns: repeat(3, max-content);
-      gap: 36px;
+      display: flex;
+      justify-content: space-between;
       padding-top: 11px;
+      padding-right: 5px;
 
       &:last-child {
         border-bottom: none;
@@ -76,13 +76,13 @@
 
     @media (min-width: $breakpoint-desktop) {
       padding: 0;
-      gap: 35px;
       background-color: transparent;
     }
   }
 
   &__item {
     @media (min-width: $breakpoint-tablet) {
+      margin-left: 33px;
       padding-bottom: 8px;
     }
 
@@ -133,6 +133,7 @@
     }
 
     @media (min-width: $breakpoint-tablet) {
+      width: max-content;
       padding-top: 0;
       padding-bottom: 0;
       font-size: 18px;

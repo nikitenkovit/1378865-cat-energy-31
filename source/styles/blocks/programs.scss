@@ -26,6 +26,7 @@
   }
 
   &__title {
+    margin-bottom: 28px;
     margin-left: 70px;
     font-family: $secondary-font;
     font-weight: 400;
@@ -36,12 +37,14 @@
     color: $primary-title-color;
 
     @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 24px;
       margin-left: 0;
       font-size: 36px;
       line-height: 36px;
     }
 
     @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 73px;
       margin-left: 162px;
     }
   }
@@ -51,7 +54,6 @@
     gap: 13px;
     align-items: center;
     width: max-content;
-    margin-top: 14px;
     padding: 4px 0;
     font-family: $secondary-font;
     font-size: 16px;
@@ -84,7 +86,6 @@
 
     @media (min-width: $breakpoint-tablet) {
       gap: 25px;
-      margin-top: 0;
       font-size: 20px;
       line-height: normal;
     }
@@ -177,7 +178,7 @@
 
 .programs__description {
   position: relative;
-  margin-top: 28px;
+  margin-bottom: 15px;
   padding-bottom: 23px;
   font-family: $primary-font;
   font-size: 14px;
@@ -195,7 +196,6 @@
   }
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: 24px;
     margin-bottom: 48px;
     padding-bottom: 0;
     font-size: 16px;
@@ -203,7 +203,6 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-top: 73px;
     margin-bottom: 23px;
   }
 }
